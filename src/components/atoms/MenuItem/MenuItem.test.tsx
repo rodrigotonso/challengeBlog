@@ -11,6 +11,6 @@ describe("Check MenuItem", () => {
             />
         );
 
-        expect(screen.getByAltText("About us")).toBeInTheDocument();
+        expect(screen.getByText("About us")).toBeInTheDocument();
     });
 });
