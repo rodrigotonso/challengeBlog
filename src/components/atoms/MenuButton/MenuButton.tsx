@@ -2,12 +2,12 @@ import React, { FC } from "react";
 import Button from '@mui/material/Button';
 
 type MenuButtonProps = {
-    text: string;
+    children: string;
     open: boolean;
-    handleClick: () => any;
+    handleClick: (e: React.MouseEvent<HTMLButtonElement>) => any;
 };
 
-const MenuButton: FC<MenuButtonProps> = ({ text, open, handleClick }) => {
+const MenuButton: FC<MenuButtonProps> = ({ children, open, handleClick }) => {
     return <Button
       id="basic-button"
       aria-controls={open ? 'basic-menu' : undefined}
@@ -15,7 +15,7 @@ const MenuButton: FC<MenuButtonProps> = ({ text, open, handleClick }) => {
       aria-expanded={open ? 'true' : undefined}
       onClick={handleClick}
     >
-      {text}
+      {children}
     </Button>;
 };
 
