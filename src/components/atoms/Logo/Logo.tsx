@@ -1,9 +1,9 @@
 import React, { FC } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import TEXT from "../../../constants/i18n.js";
 
 type LogoProps = {
-    src: string;
+    src: string | StaticImageData;
     alt?: string;
     width?: number;
     height?: number;
@@ -14,7 +14,6 @@ const Logo: FC<LogoProps> = ({ src, alt, width, height }) => {
         <Image
             src={src}
             alt={alt || TEXT.components.altLogo}
-            width={width || 180}
             height={height || 60}
         />
     );
