@@ -1,6 +1,6 @@
 import React, { FC } from "react";
-import SearchIcon from "@mui/icons-material/Search";
 import { Autocomplete, InputAdornment, TextField } from "@mui/material";
+import StyledSearchInput from "./StyledSearchInput"
 
 type SearchInputProps = {
     options: string[];
@@ -10,7 +10,7 @@ type SearchInputProps = {
 const SearchInput: FC<SearchInputProps> = ({ options, handleChange }) => {
     console.log(options);
     return (
-        <Autocomplete
+        <StyledSearchInput
             selectOnFocus
             clearOnBlur
             handleHomeEndKeys
