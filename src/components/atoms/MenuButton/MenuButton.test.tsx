@@ -6,7 +6,6 @@ describe("Check MenuButton", () => {
     it("Check props", () => {
         render(
             <MenuButton
-                text="Menu"
                 open={true}
                 handleClick={() => console.log("MenuButton")}
             />

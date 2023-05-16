@@ -1,22 +1,22 @@
 import React, { FC } from "react";
-import Button from '@mui/material/Button';
+import StyledButton from './StyledButton';
+import MenuIcon from '@mui/icons-material/Menu';
 
 type MenuButtonProps = {
-    children: string;
     open: boolean;
     handleClick: (e: React.MouseEvent<HTMLButtonElement>) => any;
 };
 
-const MenuButton: FC<MenuButtonProps> = ({ children, open, handleClick }) => {
-    return <Button
+const MenuButton: FC<MenuButtonProps> = ({ open, handleClick }) => {
+    return <StyledButton
       id="basic-button"
       aria-controls={open ? 'basic-menu' : undefined}
       aria-haspopup="true"
       aria-expanded={open ? 'true' : undefined}
       onClick={handleClick}
     >
-      {children}
-    </Button>;
+            <MenuIcon />
+    </StyledButton>;
 };
 
 export default MenuButton;

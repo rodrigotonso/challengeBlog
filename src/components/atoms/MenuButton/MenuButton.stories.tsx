@@ -12,7 +12,6 @@ type Story = StoryObj<typeof MenuButton>;
 
 export const Primary: Story = {
     args: {
-        children: "Button",
         open: true,
         handleClick: ()=>console.log('Menu Item Click')
     },
